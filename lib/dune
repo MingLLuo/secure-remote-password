@@ -1,0 +1,18 @@
+(library
+ (name srp)
+ (public_name srp)
+ (modules types utils client server)
+ (libraries
+  cstruct
+  mirage-crypto
+  mirage-crypto-rng
+  mirage-crypto-rng.unix
+  mirage-crypto-pk
+  zarith))
+
+; Warning 6 [labels-omitted]: label shared_param was omitted in the application of this function.
+
+(env
+ (dev
+  (flags
+   (:standard -w -6))))

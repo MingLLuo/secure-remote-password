@@ -1,0 +1,10 @@
+(test
+ (name test_srp)
+ (libraries srp alcotest))
+
+; (warning 32 [unused-value-declaration]): unused value
+
+(env
+ (dev
+  (flags
+   (:standard -w -32))))
